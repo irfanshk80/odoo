@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+      id="pos_sync_template"
+      name="pos_sync_partner_template"
+      inherit_id="point_of_sale.assets"
+    >
+      <xpath expr="." position="inside">
+        <script type="javascript" src="/pos_sync/static/src/js/pos_sync.js" />
+      </xpath>
+    </template>
+</odoo>

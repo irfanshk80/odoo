@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="pos_order_form_inherit">
+      <field name="name">pos.order.form.inherit</field>
+      <field name="model">pos.order</field>
+      <field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='user_id']" position='after'>
+            <field string='DeliveryMode' name="deliverymode" readonly="1" />
+        </xpath>
+      </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+      <record id="account_cc" model="account.account">
+          <field name="name">Customer Credit</field>
+          <field name="code">CC002</field>
+          <field name="user_type_id" ref = "account.data_account_type_liquidity" />
+      </record>
+      <record id="payment_method_cc" model="pos.payment.method">
+          <field name="name">Customer Credit</field>
+          <field name="receivable_account_id" ref="pos_delivery_mode.account_cc" />
+      </record>
+    </data>
+</odoo>
