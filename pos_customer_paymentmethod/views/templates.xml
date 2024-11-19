@@ -1,0 +1,13 @@
+<odoo>
+  <template 
+      id="pos_customer_paymentmethod_template"
+      name="pos_customer_paymentmethod_template"
+      inherit_id="point_of_sale.assets"
+  >
+    <xpath expr="." position="inside">
+      <script type="javascript" src="/pos_customer_paymentmethod/static/src/js/models.js" />
+    </xpath>
+
+  </template>
+
+</odoo>

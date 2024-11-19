@@ -1,0 +1,14 @@
+<odoo>
+    <template
+      id="pos_journal_discount_template"
+      name = "pos_journal_discount_template"
+      inherit_id = "point_of_sale.assets"
+    >
+
+      <xpath expr="." position="inside">
+        <script type="javascript" src="/pos_journal_discount13/static/src/js/models.js" />
+        <script type="javascript" src="/pos_journal_discount13/static/src/js/screens.js" />
+      </xpath>
+
+    </template>
+</odoo>

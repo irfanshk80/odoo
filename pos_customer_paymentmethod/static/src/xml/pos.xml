@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+	<t t-extend="ClientDetails">
+		<t t-jquery=".client-details-left" t-operation="append">
+			<div class='client-detail'>
+			    <span class='label'>Insurance Rate</span>
+			    <t t-if='partner.insurance_value'>
+			        <span class='detail'><t t-esc='partner.insurance_value' /></span>
+			    </t>
+			</div>
+		</t>
+	</t>
+
+	<t t-extend="ClientDetailsEdit">
+		<t t-jquery=".client-details-left" t-operation="append">
+			<div class='client-detail'>
+			    <span class='label'>Insurance Rate</span>
+			    <input class='detail' name='insurance_value' t-att-value='partner.insurance_value || ""'></input>
+			</div>
+		</t>
+	</t>
+
+</templates>

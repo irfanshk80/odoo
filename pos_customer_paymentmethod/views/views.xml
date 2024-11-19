@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="pos_customer_paymentmethod_insurancevalue_formview">
+      <field name="name">pos.customer.paymentmethod.insurancevalue</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="point_of_sale.view_partner_property_form" />
+      <field name="arch" type="xml">
+        <xpath expr="//group[@name='point_of_sale']" position="inside">
+            <field name="insurance_value"/>
+        </xpath>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="pos_customer_paymentmethod_isinsurance_formview">
+        <field name="name">pos.customer.paymentmethod_formview</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='Payment methods']" position="inside">
+                <div class="o_setting_left_pane">
+                    <label for="is_insurance"/>
+                    <field name="is_insurance" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="custom\pos_customer_paymentmethod.action_window">
+      <field name="name">custom\pos_customer_paymentmethod window</field>
+      <field name="res_model">custom\pos_customer_paymentmethod.custom\pos_customer_paymentmethod</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="custom\pos_customer_paymentmethod.action_server">
+      <field name="name">custom\pos_customer_paymentmethod server</field>
+      <field name="model_id" ref="model_custom\pos_customer_paymentmethod_custom\pos_customer_paymentmethod"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="custom\pos_customer_paymentmethod" id="custom\pos_customer_paymentmethod.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="custom\pos_customer_paymentmethod.menu_1" parent="custom\pos_customer_paymentmethod.menu_root"/>
+    <menuitem name="Menu 2" id="custom\pos_customer_paymentmethod.menu_2" parent="custom\pos_customer_paymentmethod.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="custom\pos_customer_paymentmethod.menu_1_list" parent="custom\pos_customer_paymentmethod.menu_1"
+              action="custom\pos_customer_paymentmethod.action_window"/>
+    <menuitem name="Server to list" id="custom\pos_customer_paymentmethod" parent="custom\pos_customer_paymentmethod.menu_2"
+              action="custom\pos_customer_paymentmethod.action_server"/>
+-->
+</odoo>
